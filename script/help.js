@@ -91,7 +91,11 @@ module.exports.handleEvent = async function({
     messageID,
     body
   } = event;
-  const message = prefix ? 'This is my prefix: ' + prefix : "Sorry i don't have prefix";
+  const message = prefix ? '━━━━━━━━━━━━━━━━━━
+𝗕𝗢𝗧 𝗡𝗔𝗠𝗘: $(botName)\n
+𝗔𝗗𝗠𝗜𝗡 𝗡𝗔𝗠𝗘: $(adminName)\n
+𝗣𝗥𝗘𝗙𝗜𝗫:
+━━━━━━━━━━━━━━━━━━ ' + prefix : "Sorry i don't have prefix";
   if (body?.toLowerCase().startsWith('prefix')) {
     api.sendMessage(message, threadID, messageID);
   }
