@@ -99,11 +99,10 @@ module.exports.run = async ({ api, event, args }) => {
           .format("DD/MM/YYYY HH:mm:ss")}\n`;
     }
     api.sendMessage(
-      `${msg}\nApprove friend request using UID: acc approve <UID>`,
+      `${msg}\nApprove friend request using UID: accept approve <UID>`,
       threadID,
       messageID
     );
   } catch (error) {
     api.sendMessage(error.message, threadID, messageID);
-  }
-};
+ accept
