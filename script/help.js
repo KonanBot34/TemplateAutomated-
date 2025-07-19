@@ -3,7 +3,7 @@ module.exports.config = {
   version: '1.0.0',
   role: 0,
   hasPrefix: true,
-  aliases: ['tulong,H'],
+  aliases: ["tulong","H"],
   description: "Beginner's guide",
   usage: "Help [page] or [command]",
   credits: 'Develeoper',
@@ -27,11 +27,11 @@ module.exports.run = async function({
       let end = start + pages;
       let helpMessage = `🇵🇭𝗞𝗔𝗜𝗭𝗨𝗭 𝗟𝗜𝗦𝗧🇺🇸:\n\n`;
       for (let i = start; i < Math.min(end, commands.length); i++) {
-        helpMessage += `\t${i + 1}. 🦝 ${prefix}${commands[i]} 🍀\n`;
+        helpMessage += `\t${i + 1}. 🦝🍀 ${prefix}${commands[i]} \n`;
       }
       helpMessage += '\n🇵🇭𝗘𝗩𝗘𝗡𝗧 𝗟𝗜𝗦𝗧🇺🇸:\n\n';
       eventCommands.forEach((eventCommand, index) => {
-        helpMessage += `\t${index + 1}. 🦝 ${prefix}${eventCommand} 🍀\n`;
+        helpMessage += `\t${index + 1}. 🦝🍀 ${prefix}${eventCommand} \n`;
       });
       helpMessage += `\nPage ${page}/${Math.ceil(commands.length / pages)}. To view the next page, type '${prefix}help page number'. To view information about a specific command, type '${prefix}help command name'.`;
       api.sendMessage(helpMessage, event.threadID, event.messageID);
@@ -42,11 +42,11 @@ module.exports.run = async function({
       let end = start + pages;
       let helpMessage = `🇵🇭𝗞𝗔𝗜𝗭𝗨𝗭 𝗟𝗜𝗦𝗧🇺🇸:\n\n`;
       for (let i = start; i < Math.min(end, commands.length); i++) {
-        helpMessage += `\t${i + 1}. 🦝 ${prefix}${commands[i]} 🍀\n`;
+        helpMessage += `\t${i + 1}. 🦝🍀 ${prefix}${commands[i]} \n`;
       }
       helpMessage += '\n🇵🇭𝗘𝗩𝗘𝗡𝗧 𝗟𝗜𝗦𝗧🇺🇸:\n\n';
       eventCommands.forEach((eventCommand, index) => {
-        helpMessage += `\t${index + 1}. 🦝 ${prefix}${eventCommand} 🍀\n`;
+        helpMessage += `\t${index + 1}. 🦝🍀 ${prefix}${eventCommand} \n`;
       });
       helpMessage += `\nPage ${page} of ${Math.ceil(commands.length / pages)}`;
       api.sendMessage(helpMessage, event.threadID, event.messageID);
@@ -71,7 +71,7 @@ module.exports.run = async function({
         const creditsMessage = credits ? `➛ Credits: ${credits}\n` : '';
         const versionMessage = version ? `➛ Version: ${version}\n` : '';
         const cooldownMessage = cooldown ? `➛ Cooldown: ${cooldown} second(s)\n` : '';
-        const message = ` 🦝 Command 🍀\n\n➛ Name: ${name}\n${versionMessage}${roleMessage}\n${aliasesMessage}${descriptionMessage}${usageMessage}${creditsMessage}${cooldownMessage}`;
+        const message = ` 🦝🍀 Command \n\n➛ Name: ${name}\n${versionMessage}${roleMessage}\n${aliasesMessage}${descriptionMessage}${usageMessage}${creditsMessage}${cooldownMessage}`;
         api.sendMessage(message, event.threadID, event.messageID);
       } else {
         api.sendMessage('Command not found.', event.threadID, event.messageID);
